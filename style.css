@@ -1,0 +1,497 @@
+/* global regle */
+
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: inherit;
+}
+
+.global {
+    font-family: "Open Sans";
+}
+
+
+/* header et nav */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://www.studyrama.com/local/cache-vignettes/L990xH363/arton103809-25d72.png?1613072167");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 76rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+header .photo img {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+}
+
+header .photo {
+    margin: 0 auto;
+    width: 30rem;
+}
+
+header .info {
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    width: 40rem;
+    padding: 2rem;
+}
+
+header .info h1 {
+    font-size: 3rem;
+}
+
+header .info h3 {
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+header .info p {
+    font-size: 1.2rem;
+    padding: 2rem;
+    color: white;
+}
+
+header i {
+    padding-right: 1.5rem;
+}
+
+header .info button {
+    width: 20rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    transition: transform 1s;
+    border-radius: 2rem;
+    position: relative;
+}
+
+header button:hover {
+    transform: scale(1.2);
+}
+
+header .scroll {
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .check div p {
+    writing-mode: vertical-rl;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50rem;
+    right: 2rem;
+    color: rgb(170, 193, 247);
+    text-align: right;
+    animation: animeScroll 2s infinite;
+}
+
+.area {
+    background: #4e54c8;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(135, 210, 231, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 15s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 20s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 50s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 40s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 13s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+@keyframes animeScroll {
+    0% {
+        top: 50rem;
+        color: rgb(150, 191, 226);
+    }
+    25% {
+        top: 52rem;
+        color: rgb(233, 147, 96);
+    }
+    50% {
+        top: 54rem;
+        color: rgb(228, 215, 33);
+    }
+    75% {
+        top: 56rem;
+        color: rgb(154, 104, 149);
+    }
+    100% {
+        top: 58rem;
+        color: rgb(101, 148, 94);
+    }
+}
+
+
+/* section porfolio */
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container .portfolio {
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1rem;
+    cursor: pointer;
+    color: rgb(22, 80, 216);
+}
+
+.container div {
+    cursor: pointer;
+    text-justify: justify;
+    padding: 3rem;
+    margin: 2rem 4rem 0rem 0rem;
+    font-size: 1.4rem;
+    border: 4 solid black;
+    border-radius: 1.5rem;
+    transition: transform 1s;
+    box-shadow: 1px 1px 20px #00000077;
+}
+
+.container div:hover {
+    transform: scale(1.06);
+}
+
+.container div img {
+    width: 35rem;
+    height: 20rem;
+    padding: 2rem;
+}
+
+.container div li,
+p {
+    padding-left: 2rem;
+}
+
+.container div ul {
+    list-style-type: none;
+}
+
+.container div li i {
+    padding-right: 2rem;
+}
+
+.more {
+    margin: 4rem;
+    position: relative;
+}
+
+.more p {
+    text-align: center;
+}
+
+.more a {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+
+/* section recommande */
+
+.recommandation {
+    margin: 10rem 0rem 0rem 0rem;
+}
+
+.carousel-inner .carousel-item h3,
+p {
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.recommandation .carousel .tire {
+    margin-top: 20rem;
+    background-color: rgb(22, 80, 216);
+}
+
+.recommandation .carousel button i {
+    color: rgb(22, 80, 216);
+    font-size: 3rem;
+}
+
+.recommandation .carousel .carousel-item {
+    margin-bottom: 5rem;
+    font-size: 3rem;
+}
+
+.aPropos {
+    margin: 5rem;
+    font-size: 2rem;
+}
+
+.aPropos p {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.aPropos p i {
+    margin: 2rem;
+}
+
+
+/* contats */
+
+.contacts {
+    margin-top: 10rem;
+    background-color: rgba(236, 236, 236, 0.435);
+    padding: 5rem 0rem 5rem 5rem;
+    display: flex;
+    font-size: 1.7rem;
+}
+
+.contacts .form {
+    margin: 0 auto;
+    width: 45rem;
+}
+
+.contacts .infoContact p {
+    margin-top: 10rem;
+    margin-right: 10rem;
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1rem;
+    cursor: pointer;
+    color: rgb(22, 80, 216);
+}
+
+.contacts .infoContact p i {
+    margin: 1rem;
+}
+
+.contacts .form-group .form-control {
+    height: 5rem;
+    margin: 2rem;
+    border-radius: rem;
+}
+
+.contacts .form-group .texta {
+    margin: 2rem;
+    height: 10rem;
+    border-radius: 2rem;
+}
+
+.contacts button {
+    width: 15rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    transition: transform 1s;
+    border-radius: 2rem;
+}
+
+.contacts button:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 7px;
+    }
+    header {
+        align-content: center;
+        flex-direction: column;
+    }
+    header .photo {
+        margin: 0rem;
+        width: 25rem;
+    }
+    .info {
+        margin-top: 2rem;
+        margin-left: 15rem;
+    }
+    .photo img {
+        margin-left: 15rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .global {
+        margin: 0rem 5rem 0rem 5rem;
+    }
+}
+
+footer {
+    font-size: 1.5rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(62, 62, 62, 0.796);
+}
+
+footer .sociaux ul {
+    margin: 0 auto;
+    width: 55rem;
+    list-style-type: none;
+    align-content: center;
+    padding: 2rem;
+    display: flex;
+}
+
+footer .sociaux ul li {
+    margin: 2rem;
+}
+
+footer .sociaux ul li a {
+    text-decoration: none;
+    color: rgb(231, 226, 226);
+}
+
+footer .sociaux ul li a:hover {
+    color: rgb(9, 48, 54);
+}
+
+footer .sociaux ul li a i {
+    margin-right: 1rem;
+}
+
+footer p {
+    color: rgb(231, 226, 226);
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 7px;
+    }
+    header {
+        align-content: center;
+        flex-direction: column;
+    }
+    .info {
+        margin-top: 2rem;
+        margin-left: 15rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
