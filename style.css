@@ -434,9 +434,6 @@ p {
         display: flex;
         flex-direction: column;
     }
-    .global {
-        margin: 0rem 5rem 0rem 5rem;
-    }
 }
 
 footer {
@@ -499,5 +496,11 @@ footer p {
     }
     .container .portfolio {
         display: none;
+    }
+    header .photo img {
+        margin-right: 20rem;
+    }
+    .container div {
+        margin: 4rem 5rem 0rem 5rem;
     }
 }
