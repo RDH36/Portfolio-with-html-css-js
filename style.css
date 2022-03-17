@@ -494,4 +494,7 @@ footer p {
         display: flex;
         flex-direction: column;
     }
+    .contacts .infoContact {
+        display: none;
+    }
 }
